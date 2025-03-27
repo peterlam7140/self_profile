@@ -5,7 +5,7 @@ function IndexPage() {
   return (
     <div className="web-border-space">
       <h1>Welcome to My Profile</h1>
-      <h2>My Projects</h2>
+      <h2>My Projects{process.env.NODE_ENV}</h2>
       <div className="grid-list">
         <ul>
           {projects.map((project:Project) => (

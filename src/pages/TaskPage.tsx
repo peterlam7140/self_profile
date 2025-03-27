@@ -31,8 +31,8 @@ function TaskPage() {
     };
 
     const handleDelete = (id:number) => {
-        setTasks(tasks.filter((task, index) => index !== id));
-        setEditingText(editingText.filter((task, index) => index !== id));
+        setTasks(tasks.filter((_task, index) => index !== id));
+        setEditingText(editingText.filter((_task, index) => index !== id));
     };
 
     return (

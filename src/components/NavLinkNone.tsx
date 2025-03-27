@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function NavLinkNone({ to, children }: { to: string; children: React.ReactNode }) {
   const location = useLocation();
