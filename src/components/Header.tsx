@@ -1,11 +1,12 @@
 import { useState } from 'react';
 
-import { projects, Project } from '../data/projects';
+import { projects as projectList, Project } from '../data/projects';
+import { homeworks as homeworkList, Homework } from '../data/homeworks';
 
-import NavLinkNone from '../components/NavLinkNone';
-import NavLinkCustom from '../components/NavLinkCustom';
+import NavLinkNone from './NavLinkNone';
+import NavLinkCustom from './NavLinkCustom';
 
-function Navigation() {
+function Header() {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
   return (
@@ -20,9 +21,21 @@ function Navigation() {
                 <NavLinkNone to="/projects">Project</NavLinkNone>
                 <div className="nav-lv2">
                   <ul>
-                    {projects.map((project:Project) => (
+                    {projectList.map((project:Project) => (
                       <li key={project.id}>
                           <NavLinkCustom to={`/projects/${project.id}`}>{project.title}</NavLinkCustom>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <NavLinkNone to="/homeworks">Homework</NavLinkNone>
+                <div className="nav-lv2">
+                  <ul>
+                    {homeworkList.map((homework:Homework) => (
+                      <li key={homework.id}>
+                          <NavLinkCustom to={`/homeworks/${homework.id}`}>{homework.title}</NavLinkCustom>
                       </li>
                     ))}
                   </ul>
@@ -45,4 +58,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default Header;

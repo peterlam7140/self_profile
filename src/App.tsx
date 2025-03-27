@@ -5,21 +5,29 @@ import './styles/index.css'
 import './styles/article.css'
 
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import Navigation from './pages/Navigation';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 import IndexPage from './pages/IndexPage';
 import ProjectPage from './pages/ProjectPage';
+import HomeworkPage from './pages/HomeworkPage';
 import TaskPage from './pages/TaskPage';
 
 function App() {
   return (
     <>
       <HashRouter basename="">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<IndexPage />} />
-          <Route path="/projects/:projectId" element={<ProjectPage />} />
-          <Route path="/tasks" element={<TaskPage />} />
-        </Routes>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<IndexPage />} />
+            <Route path="/projects/:projectId" element={<ProjectPage />} />
+            <Route path="/homeworks/:projectId" element={<HomeworkPage />} />
+            <Route path="/tasks" element={<TaskPage />} />
+          </Routes>
+        </main>
+        <Footer />
       </HashRouter>
     </>
   )

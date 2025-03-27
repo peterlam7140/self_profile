@@ -11,9 +11,13 @@
 }
 
 .article-banner {
-    height: 300px;
     width: 100%;
     background-color: #CCC;
+}
+
+.article-banner img {
+    aspect-ratio: 4 / 1.5;
+    object-fit: contain;
 }
 
 .article-content {

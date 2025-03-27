@@ -1,4 +1,4 @@
-function ProjectPage() {
+function Demo() {
   return (
     <div>
       <h1>Demo</h1>
@@ -32,4 +32,4 @@ function ProjectPage() {
   );
 }
 
-export default ProjectPage;
+export default Demo;
