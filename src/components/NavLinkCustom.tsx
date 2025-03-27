@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 
-function NavLinkCustom({ to, children }: { to: string; children: React.ReactNode }) {
+function NavLinkCustom({ to, clickEvent, children }: { to: string; clickEvent?: React.MouseEventHandler<HTMLAnchorElement>; children: React.ReactNode }) {
   return (
-    <NavLink to={ to } className={({ isActive }) => isActive ? 'router-link-custom router-link-active' : 'router-link-custom' }>{ children }</NavLink>
+    <NavLink to={ to } className={({ isActive }) => isActive ? 'router-link-custom router-link-active' : 'router-link-custom' } onClick={clickEvent}>{ children }</NavLink>
   );
 }
 

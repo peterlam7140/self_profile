@@ -29,9 +29,9 @@ function Fyp() {
         </section>
         <section>
           <h2>Photo</h2>
-            <img src="/img/context/fyp/1.png" />
-            <img src="/img/context/fyp/2.png" />
-            <img src="/img/context/fyp/3.png" />
+            <img src={ import.meta.env.BASE_URL + "/img/context/fyp/1.png" } />
+            <img src={ import.meta.env.BASE_URL + "/img/context/fyp/2.png" } />
+            <img src={ import.meta.env.BASE_URL + "/img/context/fyp/3.png" } />
         </section>
       </div>
     );

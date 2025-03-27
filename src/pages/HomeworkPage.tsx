@@ -18,7 +18,7 @@ function HomeworkPage() {
   </ul>
 
   const contextNote = (homework) ? homework.element : <div>Article not found</div>
-  const bannerNote = (homework) ? <img src={homework.banner}/> : null
+  const bannerNote = (homework) ? <img src={ import.meta.env.BASE_URL + homework.banner }/> : null
 
   return (
     <Article banner={ bannerNote } projectsList={ projectsList }>{ contextNote }</Article>

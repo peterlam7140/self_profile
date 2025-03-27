@@ -18,7 +18,7 @@ function ProjectPage() {
   </ul>
 
   const contextNote = (project) ? project.element : <div>Article not found</div>
-  const bannerNote = (project) ? <img src={project.banner}/> : null
+  const bannerNote = (project) ? <img src={import.meta.env.BASE_URL + project.banner}/> : null
 
   return (
     <Article banner={ bannerNote } projectsList={ projectsList }>{ contextNote }</Article>

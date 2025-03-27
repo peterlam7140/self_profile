@@ -13,7 +13,7 @@ function IndexPage() {
           {projectList.map((project:Project) => (
             <li key={project.id}>
                 <Link to={`/projects/${project.id}`}>
-                  <img src={project.thumbnail}/>
+                  <img src={import.meta.env.BASE_URL + project.thumbnail}/>
                   <h3>{project.title}</h3>
                 </Link>
             </li>
@@ -27,7 +27,7 @@ function IndexPage() {
           {homeworkList.map((homework:Homework) => (
             <li key={homework.id}>
                 <Link to={`/homeworks/${homework.id}`}>
-                  <img src={homework.thumbnail}/>
+                  <img src={import.meta.env.BASE_URL + homework.thumbnail}/>
                   <h3>{homework.title}</h3>
                 </Link>
             </li>
