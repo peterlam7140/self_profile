@@ -1,33 +1,18 @@
 function Spring() {
     return (
       <div>
-        <h1>Spring</h1>
-        <div className="sub-title">title</div>
+        <h1>Spring-Boot-App</h1>
+        {/* <div className="sub-title">title</div> */}
         <h2>Skill Set</h2>
         <ul className="article-tag">
-          <li>PHP</li>
-          <li>PHP</li>
-          <li>PHP</li>
-          <li>PHP</li>
-          <li>PHP</li>
-          <li>PHP</li>
-          <li>PHP</li>
-          <li>PHP</li>
-          <li>PHP</li>
-          <li>PHP</li>
-          <li>PHP</li>
-          <li>PHP</li>
-          <li>PHP</li>
-          <li>PHP</li>
+          <li>Java</li>
+          <li>Spring Boot</li>
+          <li>JPA</li>
         </ul>
-        <section>
+        {/* <section>
           <h2>Description</h2>
           <p>content</p>
-        </section>
-        <section>
-          <h2>Highlight</h2>
-          <p>content</p>
-        </section>
+        </section> */}
       </div>
     );
   }

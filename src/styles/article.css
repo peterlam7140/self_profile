@@ -11,13 +11,21 @@
 }
 
 .article-banner {
+    max-width: 1920px;
+    margin: 0 auto;
     width: 100%;
     background-color: #CCC;
 }
 
 .article-banner img {
-    aspect-ratio: 4 / 1.5;
+    display: block;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    aspect-ratio: 4 / 1.3;
     object-fit: contain;
+    object-position: 50% 50%;
+    background-color: #ccc;
 }
 
 .article-content {
@@ -29,13 +37,18 @@
     /* padding: 0 20px 20px; */
     text-shadow: 2px 2px 4px #CCC;
     /* border-bottom: 1px solid #000; */
-    font-size: 2em;
+    font-size: 3em;
 }
 
 @media screen and (min-width: 769px) {
     .article-content h1 {
         margin-top: -0.7em;
     }
+}
+
+.article-content .sub-title {
+    font-size: 1.5em;
+    margin-top: 10px;
 }
 
 ul.article-tag {
