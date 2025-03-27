@@ -1,0 +1,29 @@
+.grid-list > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-list > ul {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .grid-list > ul {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.grid-list > ul > li a {
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #999;
+  padding: 10px;
+}

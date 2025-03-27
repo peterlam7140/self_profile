@@ -1,0 +1,225 @@
+header {
+    background-color: transparent;
+    background-color: antiquewhite;
+    box-shadow: 0px 4px 4px #CCC;
+}
+
+#header-wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+}
+
+header nav > ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    z-index: 20;
+}
+
+header nav > ul li {
+    margin: 0;
+    padding: 10px 0;
+    position: relative;
+}
+
+header nav > ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+header nav > ul > li > a.router-link-active {
+    border-bottom: 1px solid #000;
+}
+
+#nav-overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.hamburger {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    z-index: 100;
+    -webkit-user-select: none;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    padding: 15px 10px;
+    box-sizing: content-box;
+}
+
+.hamburger span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #232323;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+.hamburger span:nth-last-child(1) {
+    transform-origin: 0% 100%;
+}
+
+.hamburger.checked > span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, -3px);
+}
+
+.hamburger.checked > span:nth-last-child(2) {
+    opacity: 0;
+}
+
+.hamburger.checked > span:nth-last-child(1) {
+    transform: rotate(-45deg) translate(3px, 7px);
+}
+
+@media screen and (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+    .nav-lv2 > ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 300px;
+        background-color: #FFF;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0)
+    }
+
+    header nav > ul > li .nav-lv2 > ul li {
+        padding: 0;
+        margin: 0;
+    }
+
+    header nav > ul > li .nav-lv2 > ul li a {
+        display: block;
+        padding: 10px;
+    }
+
+    header nav > ul > li .nav-lv2 > ul li a.router-link-active {
+        background-color: antiquewhite;
+    }
+
+    header nav > ul > li:hover .nav-lv2 > ul {
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-lv2 > ul > li {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #header-wrapper {
+        justify-content: flex-end;
+    }
+    header nav {
+        display: block;
+        position: fixed;
+        right: -300px;
+        top: 0;
+        width: 300px;
+        bottom: 0;
+        padding: 60px 20px 20px;
+        background-color: #FFF;
+        z-index: 10;
+    }
+
+    header nav > ul {
+        display: block;
+    }
+
+    #nav-overlay {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    header nav, 
+    #nav-overlay {
+        transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0)
+    }
+
+    header nav.active {
+        right: 0;
+    }
+    #nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    header nav > ul > li > a.router-link-active {
+        border-bottom: 0;
+    }
+
+    header nav > ul li {
+        margin: 10px 0;
+        padding: 0;
+        position: relative;
+    }
+    
+    header nav > ul li a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    header nav > ul > li > a {
+        padding: 10px 16px;
+    }
+
+    header nav > ul li > a {
+        display: block;
+        padding: 10px 16px;
+        border-radius: 4px;
+        border: 1px solid #999;
+        box-shadow: 3px 3px 0px #999;
+        background-color: #b8c2d8;
+        color: #000;
+        text-decoration: none;
+    }
+
+    header nav > ul li > a:not(.router-link-active):hover {
+        background-color: #9cbbfd;
+    }
+
+    header nav > ul li > a:active {
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0px #999;
+    }
+
+    header nav > ul li > a.router-link-active {
+        background: #FFF;
+    }
+
+    header nav > ul > li .nav-lv2 > ul {
+        display: block;
+        margin: 20px 0;
+        padding: 0;
+        list-style: none;
+        border-left: 2px solid #000;
+        padding-left: 20px;
+    }
+}
