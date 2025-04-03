@@ -1,3 +1,5 @@
+import PhotoswipeGallery from '../components/PhotoswipeGallery'
+
 function Fyp() {
     return (
       <div>
@@ -29,12 +31,14 @@ function Fyp() {
         </section>
         <section>
           <h2>Photo</h2>
-            <img src={ import.meta.env.BASE_URL + "/img/context/fyp/1.png" } />
-            <img src={ import.meta.env.BASE_URL + "/img/context/fyp/2.png" } />
-            <img src={ import.meta.env.BASE_URL + "/img/context/fyp/3.png" } />
+          <PhotoswipeGallery list={[
+            import.meta.env.BASE_URL + "img/context/fyp/1.png",
+            import.meta.env.BASE_URL + "img/context/fyp/2.png",
+            import.meta.env.BASE_URL + "img/context/fyp/3.png",
+          ]}/>
         </section>
       </div>
     );
-  }
-  
-  export default Fyp;
+}
+
+export default Fyp;

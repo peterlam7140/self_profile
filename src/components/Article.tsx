@@ -9,7 +9,7 @@ function Article({ banner, projectsList, children }: { banner: React.ReactNode; 
       <div className="web-border-space">
         <div className="article-wrapper">
           <aside>
-            <button className="button submenu-btn" onClick={()=>{ setIsOpenSubmenu(!isOpenSubmenu) }}>Sub Menu</button>
+            <button className="button submenu-btn" onClick={()=>{ setIsOpenSubmenu(!isOpenSubmenu) }}>{isOpenSubmenu?"Close":"Open"} Sub Menu</button>
             <nav className={(isOpenSubmenu) ? "active" : ""}>
                 { projectsList }
             </nav>

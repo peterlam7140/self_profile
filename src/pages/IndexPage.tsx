@@ -6,7 +6,8 @@ import { homeworks as homeworkList, Homework } from '../data/homeworks';
 function IndexPage() {
   return (
     <div className="web-border-space">
-      <h1>Welcome to My Profile</h1>
+      {/* <h1>Welcome to My Profile</h1> */}
+      <h1>Work in progress</h1>
       <h2>Selected Projects</h2>
       <div className="grid-list">
         <ul>

@@ -9,9 +9,9 @@ import Drupal from "../project/Drupal"
 
 export const projects: Project[] = [
     { id: '1', title: 'GHS - Secondary School and Landing', element: <GoodHope/>, thumbnail: "img/thumbnail/GoodHope.png", banner: "img/banner/GoodHope.png" },
-    { id: '2', title: 'eCard.pro', element: <ECard/>, thumbnail: "img/thumbnail/ecard_pro.svg", banner: "img/banner/ecard_pro.svg" },
+    { id: '2', title: 'eCard.pro', element: <ECard/>, thumbnail: "img/thumbnail/ecard_pro.svg", banner: "img/banner/ecard_pro.png" },
     { id: '3', title: 'Hong Kong Motor Club', element: <MotorClub/>, thumbnail: "img/thumbnail/motorclub.png", banner: "img/banner/motorclub.png" },
-    { id: '4', title: 'Drupal Projects', element: <Drupal/>, thumbnail: "img/thumbnail/drupal-wordmark.svg", banner: "img/banner/drupal-wordmark.svg" },
+    { id: '4', title: 'Drupal Projects', element: <Drupal/>, thumbnail: "img/thumbnail/drupal-wordmark.svg", banner: "img/banner/drupal.png" },
 ];
 
 export interface Project {

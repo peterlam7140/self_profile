@@ -1,3 +1,5 @@
+import PhotoswipeGallery from '../components/PhotoswipeGallery'
+
 function MotorClub() {
     return (
       <div>
@@ -21,8 +23,17 @@ function MotorClub() {
             <li>Implemented Shopping Cart and Checkout process</li>
           </ul>
         </section>
+        <section>
+          <h2>Photos</h2>
+          <PhotoswipeGallery list={[
+            import.meta.env.BASE_URL + "img/context/motorclub/p1.jpeg",
+            import.meta.env.BASE_URL + "img/context/motorclub/p2.jpeg",
+            import.meta.env.BASE_URL + "img/context/motorclub/p3.jpeg",
+            import.meta.env.BASE_URL + "img/context/motorclub/p4.jpeg",
+          ]}/>
+        </section>
       </div>
     );
-  }
-  
-  export default MotorClub;
+}
+
+export default MotorClub;

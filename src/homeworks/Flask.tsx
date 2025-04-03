@@ -10,11 +10,7 @@ function Flask() {
         </ul>
         <section>
           <h2>Description</h2>
-          <p>content</p>
-        </section>
-        <section>
-          <h2>Highlight</h2>
-          <p>content</p>
+          <p>Stored testing file into test folder, all server code stored in src folder. This is like a MVC, s00000000_server.py is a controller component, that receive requests and reply message that the client want. All inside the model folder are model components, that provide business logic to controller do operations. No view component file because the server only provide web service.</p>
         </section>
       </div>
     );

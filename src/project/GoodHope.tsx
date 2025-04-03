@@ -1,3 +1,5 @@
+import PhotoswipeGallery from '../components/PhotoswipeGallery'
+
 function GoodHope() {
     return (
       <div>
@@ -20,8 +22,19 @@ function GoodHope() {
             <li>Developed application process for Secondary One admissions</li>
           </ul>
         </section>
+        <section>
+          <h2>Photos</h2>
+          <PhotoswipeGallery list={[
+            import.meta.env.BASE_URL + "img/context/ghs/p1.jpeg",
+            import.meta.env.BASE_URL + "img/context/ghs/p2.jpeg",
+            import.meta.env.BASE_URL + "img/context/ghs/p3.jpeg",
+            import.meta.env.BASE_URL + "img/context/ghs/p4.jpeg",
+            import.meta.env.BASE_URL + "img/context/ghs/p5.jpeg",
+            import.meta.env.BASE_URL + "img/context/ghs/p6.jpeg",
+          ]}/>
+        </section>
       </div>
     );
-  }
-  
-  export default GoodHope;
+}
+
+export default GoodHope;

@@ -1,3 +1,5 @@
+import PhotoswipeGallery from '../components/PhotoswipeGallery'
+
 function ECard() {
     return (
       <div>
@@ -20,8 +22,17 @@ function ECard() {
             <li>Developed a 'favorite eCard' page, allowing users to save and manage their preferred eCards, enhancing user engagement and personalization</li>
           </ul>
         </section>
+        <section>
+          <h2>Photos</h2>
+          <PhotoswipeGallery list={[
+            import.meta.env.BASE_URL + "img/context/ecard/p1.jpeg",
+            import.meta.env.BASE_URL + "img/context/ecard/p2.jpeg",
+            import.meta.env.BASE_URL + "img/context/ecard/p3.jpeg",
+            import.meta.env.BASE_URL + "img/context/ecard/p4.jpeg",
+          ]}/>
+        </section>
       </div>
     );
   }
-  
+
   export default ECard;

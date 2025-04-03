@@ -1,3 +1,4 @@
+import 'photoswipe/dist/photoswipe.css'
 import './styles/index.css'
 import './styles/main.css'
 import './styles/Navigation.css'

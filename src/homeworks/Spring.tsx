@@ -1,3 +1,5 @@
+import PhotoswipeGallery from '../components/PhotoswipeGallery'
+
 function Spring() {
     return (
       <div>
@@ -9,12 +11,20 @@ function Spring() {
           <li>Spring Boot</li>
           <li>JPA</li>
         </ul>
-        {/* <section>
-          <h2>Description</h2>
-          <p>content</p>
-        </section> */}
+        <section>
+          <h2>Photo</h2>
+          <PhotoswipeGallery list={[
+            import.meta.env.BASE_URL + "img/context/spring-boot/p1.jpeg",
+            import.meta.env.BASE_URL + "img/context/spring-boot/p2.jpeg",
+            import.meta.env.BASE_URL + "img/context/spring-boot/p3.jpeg",
+            import.meta.env.BASE_URL + "img/context/spring-boot/p4.jpeg",
+            import.meta.env.BASE_URL + "img/context/spring-boot/p5.jpeg",
+            import.meta.env.BASE_URL + "img/context/spring-boot/p6.jpeg",
+            import.meta.env.BASE_URL + "img/context/spring-boot/p7.jpeg",
+          ]}/>
+        </section>
       </div>
     );
-  }
-  
-  export default Spring;
+}
+
+export default Spring;
