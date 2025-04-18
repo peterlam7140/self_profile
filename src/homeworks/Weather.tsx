@@ -10,9 +10,13 @@ function Weather() {
           <li>React Native</li>
         </ul>
         <section>
+            <h2>Source Code</h2>
+            <a className="button" href="https://github.com/peterlam7140/react-native-weather" target="_blank">Git Hub</a>
+        </section>
+        {/* <section>
           <h2>Description</h2>
           <p>content</p>
-        </section>
+        </section> */}
         <section>
           <h2>Highlight</h2>
           <ul>
